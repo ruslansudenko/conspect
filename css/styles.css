@@ -1,0 +1,12 @@
+.container {
+  padding: 0 15px;
+}
+
+/* ! ==== Создание сайта пошагово ====  */
+.ch-bx-wrap {
+  display: flex;
+}
+
+.check-for-text {
+  margin-right: 20px;
+}
