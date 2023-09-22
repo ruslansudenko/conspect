@@ -32,13 +32,74 @@
           пользователь не нажмет ок (уже почти не используется )
 
         .toLowerCase() - привод строки к нижнему регистру.
+
         .Number()- переводит ЦИФРОВЫЕ строчные значения к типу number 
            Не работает если в введенных данных есть что-либо кроме цифр. 
            В таком случае выдаст результат = NaN 
-        .parseInt - парсит только тип number. При этом оставляет только целое число (Int)
-        .parseFloat - парсит только number и выдает все число (вместе со всеми знаками после запятой) 
+
+        .parseInt - парсит только тип number (отделяет число от строки например Number.parseInt("5px") отделит 5
+        причем берет только то что вначале строки и до первого символа который нельза перевести в цифру 
+         )  Number.parseInt("12.46qwe79") выдаст 12. При этом оставляет только целое число (Int)
+
+        .parseFloat - парсит только number и выдает все число (вместе со всеми знаками после запятой)
+
+        .toFixed(2) - обрезает дроби до колличества знаков после запятой указанного в скобках 
+        в данном случае до 2-х знаков 
+        console.log((0.17 + 0.24).toFixed(2)); // 0.41
+
+        Math 
+                // Math.floor(num) - повертає найменше ціле число,
+        // менше, або яке дорівнює зазначеному числу
+        console.log(Math.floor(1.7)); // 1
+
+        // Math.ceil(num) - повертає найбільше ціле число,
+        // більше, або яке дорівнює зазначеному числу.
+        console.log(Math.ceil(1.2)); // 2
+
+        // Math.round(num) - повертає значення числа,
+        // округленого до найближчого цілого
+        console.log(Math.round(1.2)); // 1
+        console.log(Math.round(1.5)); // 2
+
+        // Math.max(num1, num2, ...) - повертає найбільше ціле число з набору
+        console.log(Math.max(20, 10, 50, 40)); // 50
+
+        // Math.min(num1, num2, ...) - повертає найменше ціле число з набору
+        console.log(Math.min(20, 10, 50, 40)); // 10
+
+        // Math.pow(base, exponent) - піднесення до степеня
+        console.log(Math.pow(2, 4)); // 16
+
+        // Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
+        console.log(Math.random()); // випадкове число між 0 і 1
+        console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+
+
+                          СТРОКИ 
+        Конкатенация concatenation
+        const message = "Mango " + "is" + " happy";
+        console.log(message); // Mango is happy
+
+        console.log(1 + "2"); // "12"
+        console.log(1 + "2" + 4); // "124"
+        console.log(1 + 2 + "4"); // "34"
+
+        Шаблонные строки 
+        const guestName = "Манго";
+        const roomNumber = 207;
+        const greeting = `Welcome ${guestName}, your room number is ${roomNumber}!`;
+        console.log(greeting); // "Welcome Mango, your room number is 207!"
+
+        LENGTH
+        const message = "Welcome to Bahamas!";
+        console.log(message.length); // 19
+        console.log("There is nothing impossible to him who will try".length); // 47
+
+        
+
         .prompt("") -  let userPass = prompt("введите пароль") выводит вопрос требующий ввода от пользователя 
          информации которая и будет сохранена в переменную userPass
+
         includes - проверяет есть ли в списке ( в строке) совпадение например можно узнать сколько в 
          строке гласных 
          function countVolwes(str){
